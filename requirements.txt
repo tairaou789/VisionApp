@@ -1,0 +1,8 @@
+streamlit
+numpy
+pandas
+ComputerVisionClient
+OperationStatusCodes
+VisualFeatureTypes
+CognitiveServicesCredentials
+json
