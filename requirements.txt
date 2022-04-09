@@ -1,8 +1,6 @@
 streamlit
-numpy
-pandas
+Pillow
 ComputerVisionClient
 OperationStatusCodes
 VisualFeatureTypes
 CognitiveServicesCredentials
-json
