@@ -62,16 +62,18 @@ if uploaded_file is not None:
 
     # 描画
     draw = ImageDraw.Draw(img)
+
     for object in objects:
         x = object.rectangle.x
         y = object.rectangle.y
         w = object.rectangle.w
         h = object.rectangle.h
         caption = object.object_property
-        font_info = ImageFont.truetype(font='./font/arial.ttf' ,size=40)
+        size_font= int(w*0.2)
+        font_info = ImageFont.truetype(font='./font/arial.ttf' ,size=size_font)
         text_w, text_h = draw.textsize(caption, font=font_info)
-
-        draw.rectangle([(x, y), (x+w, y+h)], fill=None, outline='green', width=5)
+        size_frame = int(w*0.02)
+        draw.rectangle([(x, y), (x+w, y+h)], fill=None, outline='green', width=size_frame)
         draw.rectangle([(x, y), (x+text_w, y+text_h)], fill='green')
         draw.text((x, y), caption, fil='white', font=font_info)
     
